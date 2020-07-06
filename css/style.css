@@ -100,12 +100,14 @@ body {
   margin-bottom: 16px;
   font-size: 14px;
   line-height: 16px;
+  --animate-duration: 0.5s;
 }
 
 .raiting {
   display: flex;
   align-items: center;
   margin-bottom: 12.5px;
+  --animate-duration: 0.8s;
 }
 
 .raiting-number {
@@ -119,6 +121,7 @@ body {
   font-weight: 500;
   font-size: 76px;
   line-height: 89px;
+  --animate-duration: 1.1s;
 }
 
 .main-description {
@@ -126,9 +129,11 @@ body {
   font-size: 14px;
   line-height: 150%;
   margin-bottom: 40px;
+  --animate-duration: 1.4s;
 }
 
 .button {
+  display: inline-block;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -139,9 +144,14 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  --animate-duration: 1.7s;
 }
 
 .play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   width: 100px;
   height: 100px;
@@ -151,6 +161,7 @@ body {
   border: none;
   position: relative;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .play-img {
@@ -168,6 +179,7 @@ body {
   border-radius: 50%;
   left: -16px;
   top: -16px;
+  animation: pulse 0.5s ease-in-out 1s infinite;
 }
 
 .series {
@@ -182,6 +194,9 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+.play-series-button:hover {
+  animation: none;
+}
 
 .play-series-button {
   position: absolute;
@@ -190,6 +205,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
+  animation: bounceIn 4s infinite ease-in-out;
 }
 
 .play-series-button-img {
@@ -311,6 +327,10 @@ body {
   top: 43%;
   right: -40px;
   cursor: pointer;
+  animation: rubberBand 2s infinite ease-in-out;
+}
+.arrow:hover {
+  animation: none;
 }
 
 .footer {
@@ -363,8 +383,6 @@ body {
   .footer-link:first-child {
     margin-left: 0;
   }
-
-
 }
 
 @media (max-width: 540px) {
@@ -389,7 +407,6 @@ body {
   .line-center-active {
     transform: rotate(90deg);
     height: 0;
-
   }
 
   .line-center::before {
@@ -403,7 +420,6 @@ body {
     background-color: #fff;
     margin-top: -7px;
     transition: all 0.4s;
-
   }
 
   .line-center::after {
@@ -417,7 +433,6 @@ body {
     background-color: #fff;
     margin-top: 7px;
     transition: all 0.4s;
-
   }
 
   .line-center-active::before {
@@ -460,7 +475,6 @@ body {
   .menu-link {
     margin-right: 0;
     margin-bottom: 17px;
-
   }
 
   .social {
@@ -493,9 +507,6 @@ body {
   }
 
   .play-series-button {
-
     left: 85px;
   }
-
-
 }
