@@ -13,9 +13,9 @@ var mySwiper = new Swiper('.swiper-container', {
     }
   }
 });
-var menuButton = document.querySelector('.menu-button');
+var lineCenter = document.querySelector('.line-center');
 var menu = document.querySelector('.header')
-menuButton.addEventListener('click', function () {
-  menuButton.classList.toggle('menu-button-active');
+lineCenter.addEventListener('click', function () {
+  lineCenter.classList.toggle('line-center-active');
   menu.classList.toggle('header-active');
 });

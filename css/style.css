@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(../img/background.jpg);
+  background-image: url(/img/background.jpg);
   background-repeat: no-repeat;
   background-position: right 20% top;
 }
@@ -83,6 +83,10 @@ body {
 }
 
 .social-icon {
+  margin-left: 21px;
+}
+
+.social-icon-first {
   margin-left: 21px;
 }
 
@@ -370,28 +374,25 @@ body {
     top: 40px;
     right: 35px;
     width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .line-center {
+    width: 30px;
     height: 2px;
     background-color: #fff;
-    cursor: pointer;
-
+    transition: transform 0.4s;
   }
 
-  .menu-button-active {
+  .line-center-active {
+    transform: rotate(90deg);
     height: 0;
+
   }
 
-  .menu-button-active::before {
-    transform: rotate(45deg);
-    margin-top: 0px;
-  }
-
-  .menu-button-active::after {
-    transform: rotate(-45deg);
-    margin-top: -7px;
-  }
-
-
-  .menu-button::before {
+  .line-center::before {
     content: "";
     display: block;
     position: absolute;
@@ -401,11 +402,11 @@ body {
     height: 2px;
     background-color: #fff;
     margin-top: -7px;
-    transition: transform 0.4s;
+    transition: all 0.4s;
 
   }
 
-  .menu-button::after {
+  .line-center::after {
     content: "";
     display: block;
     position: absolute;
@@ -415,16 +416,16 @@ body {
     height: 2px;
     background-color: #fff;
     margin-top: 7px;
-    transition: transform 0.4s;
+    transition: all 0.4s;
 
   }
 
-  .menu-button-active::before {
+  .line-center-active::before {
     transform: rotate(45deg);
     margin-top: 0px;
   }
 
-  .menu-button-active::after {
+  .line-center-active::after {
     transform: rotate(-45deg);
     margin-top: 0px;
   }
@@ -467,8 +468,8 @@ body {
     margin-bottom: 22px;
   }
 
-  .social-icon:first-child {
-    /* margin-left: 0; */
+  .social-icon-first {
+    margin-left: 0;
   }
 
   .swiper-container.main {
